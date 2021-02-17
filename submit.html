@@ -89,12 +89,18 @@
             var sname = document.getElementById("student").value;
             var ssubject = document.getElementById("subject").value;
 			var smark = document.getElementById("mark").value;
+			
+			if (smark.substring(0,8) == "https://") {
+				var upMark = smark;
+			} else {
+				alert("Invalid URL entered. Please ensure that the URL entered begins with https://.");
+			}
 
             var data = 
             {
                 name: sname,
                 subject: ssubject,
-				mark: smark
+				mark: upMark
             }
 
             ref.push(data);
