@@ -5,4 +5,6 @@ High school students often read academic journals for school assignments, howeve
 
 Onderwijs uses the Firebase Realtime Database to store data, in this case article titles, author names, and links to PDFs, as well as display it on the Articles page.
 
+See it in action at <a href="https://onderwijs.ca" target="_blank">onderwijs.ca</a>
+
 Feel free to reach out on Twitter with any questions --> <a href="https://twitter.com/OnderwijsHelp" target="_blank">@OnderwijsHelp</a>
