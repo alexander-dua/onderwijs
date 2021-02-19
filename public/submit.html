@@ -90,10 +90,10 @@
             var ssubject = document.getElementById("subject").value;
 			var smark = document.getElementById("mark").value;
 			
-			if (smark.substring(0,8) == "https://") {
+			if (smark.substring(0,25) == "https://drive.google.com/" || smark.substring(0,29) == "https://www.drive.google.com/") {
 				var upMark = smark;
 			} else {
-				alert("Invalid URL entered\nPlease ensure that the URL entered begins with https://");
+				alert("Invalid URL entered\nPlease ensure that the URL entered begins with https:// and is a valid Google Drive URL");
 			}
 
             var data = 
