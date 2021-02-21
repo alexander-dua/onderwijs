@@ -90,17 +90,22 @@
             var ssubject = document.getElementById("subject").value;
 			var smark = document.getElementById("mark").value;
 			
-			if (smark.substring(0,30) == "https://drive.google.com/file/" || smark.substring(0,34) == "https://www.drive.google.com/file/") {
+			if (smark.substring(0,32) == "https://drive.google.com/file/d/") {
 				var upMark = smark;
+				var preReg = upMark.slice(32);
+					
 			} else {
-				alert("Invalid URL entered\nPlease ensure that the URL entered begins with https:// and is a valid Google Drive URL");
+				alert("Invalid URL entered\nPlease ensure that the URL entered begins with https:// and is a valid Google Drive link for a PDF file");
 			}
+			
+			var id = /^[^/]+/;
+			var finalLink = preReg.match(id);
 
             var data = 
             {
                 name: sname,
                 subject: ssubject,
-				mark: upMark
+				mark: "https://drive.google.com/uc?id=" + finalLink + "&export=download"
             }
 
             ref.push(data);
